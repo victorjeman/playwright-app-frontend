@@ -62,7 +62,6 @@ export const ProjectThumbnail = ({ project }: Props) => {
       </Group>
 
       <Group grow>
-        {/* step 8 - use `WithPermissions` component to secure the edit button */}
         <WithPermissions allowedPermissions={['project/update']}>
           <Button
             variant="light"

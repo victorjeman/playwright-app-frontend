@@ -6,7 +6,6 @@ interface Props {
   allowedPermissions: PermissionName[];
 }
 
-// step 5 - create a special component for routes that required permissions
 export const RouteWithPermissions = ({ allowedPermissions }: Props) => {
   const { activeUser } = useAppSelector((state) => state.auth);
   const location = useLocation();

@@ -12,7 +12,6 @@ const initialState: AuthState = {
   activeRole: null,
 };
 
-// step 1 - Create a store and a specific feature for auth
 export const authSlice = createSlice({
   name: 'auth',
   initialState,

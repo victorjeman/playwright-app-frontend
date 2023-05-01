@@ -9,8 +9,8 @@ import { technologyApi } from 'features/technology/api/technology-api';
 import { employeeApi } from 'features/employee/api/employee-api';
 import { authApi } from 'features/auth/api/auth-api';
 
-// step 2 - update the root store
 export const store = configureStore({
+  // @ts-ignore
   reducer: {
     project: projectReducer,
     technology: technologyReducer,
@@ -22,6 +22,7 @@ export const store = configureStore({
     [authApi.reducerPath]: authApi.reducer,
   },
 
+  // @ts-ignore
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
       projectApi.middleware,

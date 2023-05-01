@@ -6,7 +6,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-// step 7 - create special component to secure parts of the UI
 export const WithPermissions = ({ allowedPermissions, children }: Props) => {
   const { activeUser } = useAppSelector((state) => state.auth);
 

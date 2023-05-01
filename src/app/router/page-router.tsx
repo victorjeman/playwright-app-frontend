@@ -10,13 +10,11 @@ import { TechnologyPage } from 'pages/technology-page';
 import { UnauthorizedPage } from 'pages/unauthorized-page';
 import { PermissionsPage } from 'pages/permissions-page';
 
-// step 4 - create the public and secured routes
 export const PageRouter = () => (
   <Routes>
     <Route path="/" element={<LoginPage />} />
     <Route path="unauthorized" element={<UnauthorizedPage />} />
 
-    {/* step 6 - use the `RouteWithPermissions` component to secure specific routes */}
     <Route element={<RouteWithPermissions allowedPermissions={['project/read']} />}>
       <Route
         path="projects"

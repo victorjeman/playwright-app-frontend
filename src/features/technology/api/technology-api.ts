@@ -2,7 +2,11 @@ import { EndpointBuilder } from '@reduxjs/toolkit/dist/query/endpointDefinitions
 import { BaseQueryFn, createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 import { BASE_URL } from 'shared/constants/constants';
-import { Technology, TechnologyMultiSelect } from 'features/technology/types/technology-types';
+import {
+  Technology,
+  TechnologyFormValues,
+  TechnologyMultiSelect,
+} from 'features/technology/types/technology-types';
 import { transformTechnologiesForMultiselect } from 'features/technology/utils/transform-technologies-for-multiselect';
 
 export const technologyApi = createApi({
@@ -23,7 +27,7 @@ export const technologyApi = createApi({
     }),
 
     createTechnology: builder.mutation({
-      query: (technology: Technology) => ({
+      query: (technology: TechnologyFormValues) => ({
         url: '/technologies',
         method: 'POST',
         body: technology,
