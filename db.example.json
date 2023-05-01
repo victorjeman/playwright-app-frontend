@@ -1,0 +1,142 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Project 1",
+      "priority": "low",
+      "technologies": ["PHP", "SQL", "HTML", "CSS"],
+      "employees": ["John", "Jane", "Jack"]
+    },
+    {
+      "id": 2,
+      "title": "Project 2",
+      "priority": "low",
+      "technologies": ["CSS", "HTML", "Ruby", "Rails"],
+      "employees": ["Anne", "Alex"]
+    },
+    {
+      "id": 3,
+      "title": "Project 3",
+      "priority": "medium",
+      "technologies": ["React", "JavaScript", "Node"],
+      "employees": ["Angela", "Uma"]
+    },
+    {
+      "id": 4,
+      "title": "Project 4",
+      "priority": "high",
+      "technologies": ["Angular", "JavaScript", "Rails"],
+      "employees": ["George", "Gina", "Gerry"]
+    },
+    {
+      "id": 5,
+      "title": "Project 5",
+      "priority": "hot",
+      "technologies": ["Vue", "JavaScript", "Node"],
+      "employees": ["Henry", "Helen", "Hector", "Alex"]
+    },
+    {
+      "id": 6,
+      "title": "R&D de primavara",
+      "priority": "hot",
+      "technologies": ["Topor", "Ciocan", "Curaj"],
+      "employees": ["John", "Jane", "Jack", "Anne", "Alex", "Angela"]
+    }
+  ],
+
+  "technologies": [
+    { "id": 1, "name": "PHP" },
+    { "id": 2, "name": "SQL" },
+    { "id": 3, "name": "HTML" },
+    { "id": 4, "name": "CSS" },
+    { "id": 5, "name": "JavaScript" },
+    { "id": 6, "name": "Ruby" },
+    { "id": 7, "name": "Rails" },
+    { "id": 8, "name": "Node" },
+    { "id": 9, "name": "Topor" },
+    { "id": 10, "name": "Ciocan" },
+    { "id": 11, "name": "Curaj" }
+  ],
+
+  "employees": [
+    { "id": 1, "name": "John" },
+    { "id": 2, "name": "Jane" },
+    { "id": 3, "name": "Jack" },
+    { "id": 4, "name": "Anne" },
+    { "id": 5, "name": "Alex" },
+    { "id": 6, "name": "Angela" },
+    { "id": 7, "name": "Uma" },
+    { "id": 8, "name": "George" },
+    { "id": 9, "name": "Gina" },
+    { "id": 10, "name": "Gerry" },
+    { "id": 11, "name": "Henry" },
+    { "id": 12, "name": "Helen" },
+    { "id": 13, "name": "Hector" }
+  ],
+
+  "permissions": [
+    { "id": 1, "name": "project/read" },
+    { "id": 2, "name": "project/create" },
+    { "id": 3, "name": "project/update" },
+    { "id": 4, "name": "project/delete" },
+    { "id": 5, "name": "technology/read" },
+    { "id": 6, "name": "technology/create" },
+    { "id": 7, "name": "technology/update" },
+    { "id": 8, "name": "technology/delete" },
+    { "id": 9, "name": "permission/toggle" },
+    { "id": 10, "name": "role/read" },
+    { "id": 11, "name": "role/create" },
+    { "id": 12, "name": "role/update" },
+    { "id": 13, "name": "role/delete" }
+  ],
+
+  "roles": [
+    {
+      "id": 1,
+      "name": "admin",
+      "permissions": [
+        "project/read",
+        "project/create",
+        "project/update",
+        "project/delete",
+        "technology/read",
+        "technology/create",
+        "technology/update",
+        "technology/delete",
+        "permission/toggle",
+        "role/read",
+        "role/create",
+        "role/update",
+        "role/delete"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "guest",
+      "permissions": ["project/read", "technology/read"]
+    }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Victor",
+      "lastName": "Jeman",
+      "email": "victor.jeman@assist.ro",
+      "role": {
+        "id": 1,
+        "name": "admin"
+      }
+    },
+    {
+      "id": 2,
+      "firstName": "Dude",
+      "lastName": "McDude",
+      "email": "dude.mcdude@assist.ro",
+      "role": {
+        "id": 2,
+        "name": "guest"
+      }
+    }
+  ]
+}
