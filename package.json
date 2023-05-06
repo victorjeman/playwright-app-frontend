@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev:api": "node ./api/start-server.js",
+    "reset": "./reset-api.sh",
     "dev": "concurrently --kill-others \"yarn dev:api\" \"vite\"",
     "qa": "concurrently --kill-others \"yarn dev:api\" \"vite\" \"npx playwright test --ui\"",
     "qa:code": "npx playwright codegen",
     "reports": "npx playwright show-report",
-    "reset:api": "./api/reset-api.sh",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
