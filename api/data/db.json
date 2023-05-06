@@ -41,6 +41,13 @@
       "priority": "hot",
       "technologies": ["Topor", "Ciocan", "Curaj"],
       "employees": ["John", "Jane", "Jack", "Anne", "Alex", "Angela"]
+    },
+    {
+      "id": 7,
+      "title": "QA Automation, Project to delete",
+      "priority": "hot",
+      "technologies": ["JavaScript", "Rails"],
+      "employees": ["John", "Jane", "Jack", "Anne", "Alex"]
     }
   ],
 
