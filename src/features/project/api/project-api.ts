@@ -1,30 +1,26 @@
 import { EndpointBuilder } from '@reduxjs/toolkit/dist/query/endpointDefinitions';
-import { BaseQueryFn, createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { BaseQueryFn, createApi } from '@reduxjs/toolkit/query/react';
 
-import { BASE_URL } from 'shared/constants/constants';
 import { Project } from 'features/project/types/project-types';
+import { fetchBaseQueryApi } from 'shared/api/fetch-base-query-api';
 
 export const projectApi = createApi({
   reducerPath: 'projectApi',
 
-  baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
+  baseQuery: fetchBaseQueryApi(),
 
   endpoints: (builder: EndpointBuilder<BaseQueryFn, string, string>) => ({
     getProjects: builder.query<Project[], void>({
-      query: () => ({ url: 'projects' }),
+      query: () => ({ url: 'projects', method: 'get' }),
 
       providesTags: ['Projects'],
-    }),
-
-    getProjectById: builder.query<Project, number>({
-      query: (id) => `projects/${id}`,
     }),
 
     createProject: builder.mutation({
       query: (project) => ({
         url: '/projects',
-        method: 'POST',
-        body: { ...project, technologies: ['React', 'Redux'], employees: ['John', 'Jane'] },
+        method: 'post',
+        data: project,
       }),
       invalidatesTags: ['Projects'],
     }),
@@ -33,7 +29,7 @@ export const projectApi = createApi({
       query: ({ id, project }) => ({
         url: `/projects/${id}`,
         method: 'put',
-        body: project,
+        data: project,
       }),
 
       invalidatesTags: ['Projects'],

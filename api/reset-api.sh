@@ -1,2 +1,2 @@
 #!/bin/sh
-cp data/db.example.json data/db.json
+cp db.example.json db.json

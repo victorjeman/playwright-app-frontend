@@ -44,7 +44,14 @@
     },
     {
       "id": 7,
-      "title": "QA Automation, Project to delete",
+      "title": "qa-for-delete",
+      "priority": "hot",
+      "technologies": ["JavaScript", "Rails"],
+      "employees": ["John", "Jane", "Jack", "Anne", "Alex"]
+    },
+    {
+      "id": 8,
+      "title": "qa-for-update",
       "priority": "hot",
       "technologies": ["JavaScript", "Rails"],
       "employees": ["John", "Jane", "Jack", "Anne", "Alex"]

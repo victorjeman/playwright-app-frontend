@@ -28,7 +28,7 @@ export const ProjectThumbnail = ({ project }: Props) => {
   }, [isSuccess]);
 
   return (
-    <Card shadow="md" padding="lg" radius="md" withBorder>
+    <Card shadow="md" padding="lg" radius="md" withBorder data-testid="project-thumbnail">
       <Group position="apart" mb="lg">
         <Text size="xl" weight={600} mb="0">
           {project.title}
@@ -41,7 +41,7 @@ export const ProjectThumbnail = ({ project }: Props) => {
 
       <Tooltip.Group openDelay={300} closeDelay={100}>
         <Avatar.Group spacing="xs">
-          {project.employees.map((employee) => (
+          {project?.employees?.map((employee) => (
             <Tooltip key={employee} label={employee} withArrow>
               <Avatar
                 src={`images/employees/${employee.toLocaleLowerCase()}.png`}
@@ -81,6 +81,7 @@ export const ProjectThumbnail = ({ project }: Props) => {
             mt="md"
             radius="md"
             onClick={() => deleteProjectMutation(project.id)}
+            data-testid={`project-thumbnail-delete-${project.title}`}
           >
             Delete
           </Button>
