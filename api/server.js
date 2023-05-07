@@ -12,8 +12,8 @@ server.use(middlewares);
 server.get('/reset', (req, res) => {
   res.jsonp(req.query);
 
-  const src = './data/db.example.json';
-  const dest = './data/db.json';
+  const src = './api/data/db.example.json';
+  const dest = './api/data/db.json';
 
   fs.copyFile(src, dest, (error) => {
     if (error) {

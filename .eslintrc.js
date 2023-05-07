@@ -3,7 +3,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  ignorePatterns: ['**/e2e/**/*.ts'],
+  ignorePatterns: ['**/e2e/**/*.ts', 'playwright.config.ts'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'no-param-reassign': [

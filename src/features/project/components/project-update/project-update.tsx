@@ -30,6 +30,7 @@ export const ProjectUpdate = () => {
       notifications.show({
         title: 'Yey',
         message: `${activeProject?.title} updated successfully`,
+        autoClose: false,
       });
 
       dispatch(setActiveProjectAction(null));
@@ -56,10 +57,17 @@ export const ProjectUpdate = () => {
         <p>{isLoading && 'Your project is being edited'}</p>
 
         <form onSubmit={form.onSubmit(updatedProject)}>
-          <TextInput label="Project title" {...form.getInputProps('title')} mb="md" />
+          <TextInput
+            label="Project title"
+            {...form.getInputProps('title')}
+            mb="md"
+            data-testid="project-update-input"
+          />
 
           <Group position="right">
-            <Button type="submit">Updated</Button>
+            <Button type="submit" data-testid="project-update-save-changes">
+              Save changes
+            </Button>
           </Group>
         </form>
       </Box>

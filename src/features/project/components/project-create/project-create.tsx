@@ -40,7 +40,16 @@ export const ProjectCreate = () => {
       </Title>
 
       <WithPermissions allowedPermissions={['project/create']}>
-        <form onSubmit={form.onSubmit((values) => createProjectMutation({ ...values, priority }))}>
+        <form
+          onSubmit={form.onSubmit((values) =>
+            createProjectMutation({
+              ...values,
+              priority,
+              technologies: ['React', 'Redux'],
+              employees: ['John', 'Jane'],
+            })
+          )}
+        >
           <TextInput
             label="Project title"
             labelProps={{ size: 'md' }}
