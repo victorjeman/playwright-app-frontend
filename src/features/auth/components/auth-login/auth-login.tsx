@@ -54,6 +54,7 @@ export function AuthLogin() {
             variant="light"
             size="md"
             onClick={() => setActiveUser(item)}
+            data-testid="login-button"
           >
             Sign in / {item.firstName} /
             <Text fw="bold" color="green" ml="3px">

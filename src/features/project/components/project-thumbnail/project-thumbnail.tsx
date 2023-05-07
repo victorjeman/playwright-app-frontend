@@ -69,8 +69,9 @@ export const ProjectThumbnail = ({ project }: Props) => {
             mt="md"
             radius="md"
             onClick={() => dispatch(setActiveProjectAction(project))}
+            data-testid={`project-update-button-${project.title}`}
           >
-            Edit
+            Update
           </Button>
         </WithPermissions>
 
@@ -81,7 +82,7 @@ export const ProjectThumbnail = ({ project }: Props) => {
             mt="md"
             radius="md"
             onClick={() => deleteProjectMutation(project.id)}
-            data-testid={`project-thumbnail-delete-${project.title}`}
+            data-testid={`project-delete-button-${project.title}`}
           >
             Delete
           </Button>
