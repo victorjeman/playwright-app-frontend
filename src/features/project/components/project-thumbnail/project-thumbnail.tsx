@@ -28,6 +28,7 @@ export const ProjectThumbnail = ({ project }: Props) => {
   }, [isSuccess]);
 
   return (
+    // STEP-5.9: add a test id attr with `project-thumbnail` as value
     <Card shadow="md" padding="lg" radius="md" withBorder data-testid="project-thumbnail">
       <Group position="apart" mb="lg">
         <Text size="xl" weight={600} mb="0">
@@ -69,7 +70,8 @@ export const ProjectThumbnail = ({ project }: Props) => {
             mt="md"
             radius="md"
             onClick={() => dispatch(setActiveProjectAction(project))}
-            data-testid={`project-update-button-${project.title}`}
+            // STEP-8.1: Generate a unique test id for each update button using the project title
+            data-testid={`project-update-button-${'what?'}`}
           >
             Update
           </Button>
@@ -82,7 +84,8 @@ export const ProjectThumbnail = ({ project }: Props) => {
             mt="md"
             radius="md"
             onClick={() => deleteProjectMutation(project.id)}
-            data-testid={`project-delete-button-${project.title}`}
+            // STEP-7.1: Generate a unique test id for each delete button using the project title
+            data-testid={`project-delete-button-${'what?'}`}
           >
             Delete
           </Button>

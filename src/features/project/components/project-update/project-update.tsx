@@ -61,10 +61,12 @@ export const ProjectUpdate = () => {
             label="Project title"
             {...form.getInputProps('title')}
             mb="md"
+            // STEP-8.5: Set a test id for the input
             data-testid="project-update-input"
           />
 
           <Group position="right">
+            {/* STEP-8.8: Set a test id for the button */}
             <Button type="submit" data-testid="project-update-save-changes">
               Save changes
             </Button>

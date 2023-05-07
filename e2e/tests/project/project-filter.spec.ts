@@ -1,1 +1,1 @@
-// TODO - session 1 individual work
+// TODO - individual work
