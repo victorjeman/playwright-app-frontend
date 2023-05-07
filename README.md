@@ -1,8 +1,11 @@
-# Mantine + Vite template
+# Learn mantine with Taia & Victor
 
-Official [Mantine](https://mantine.dev/) + [Vite](https://vitejs.dev/) template.
+## Session 1 
+<!-- To add info -->
 
-Links:
+## Session 2
 
-- [Mantine documentation](https://mantine.dev/)
-- [Vite documentation](https://vitejs.dev/)
+Testing the project feature
+
+git command: `git checkout session-2`
+branch: `https://github.com/victorjeman/playwright-app-frontend/tree/session-2`
