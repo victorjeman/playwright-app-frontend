@@ -53,26 +53,13 @@ test.describe('CRUD operations', () => {
    * STEP-5: Create a project
    */
   test('create', async ({}) => {
-    // STEP-5.1: Save the project title in a variable.
-    // const newProjectTitle = '';
-    //
-    // STEP-5.2: Get the input by label.
-    // const input = ''
-    //
-    // STEP-5.3: Fill the input.
-    // await input.what()
-    //
-    // STEP-5.4: Submit the project.
-    // await input.what()
-    //
-    // STEP-5.5: Get the newly added project by text
-    // const newProject = ''
-    //
-    // STEP-5.6: Test if the new project is attached to the DOM.
-    // await expect(what).toBeWhat();
-    //
-    // STEP-5.7: Is there a problem?  What is the problem?
-    //
+    // STEP-5.1: Save the project title in a variable. -> `const newProjectTitle = '';`
+    // STEP-5.2: Get the input by label. -> `const input = '';`
+    // STEP-5.3: Fill the input. -> `await input.what()`
+    // STEP-5.4: Submit the project. -> await input.what()
+    // STEP-5.5: Get the newly added project by text. -> const newProject = ''
+    // STEP-5.6: Test if the new project is attached to the DOM. -> await expect(what).toBeWhat();
+    // STEP-5.7: Is there a problem? What is the problem?
     // STEP-5.8: Use `{exact: true}` as the second param for `getByText` method.
     //
     // STEP-5.10: Get the thumbnails using the test id.
@@ -93,9 +80,7 @@ test.describe('CRUD operations', () => {
   test('delete', async ({}) => {
     // STEP-7.3: Select the delete button
     // const deleteButton = what?;
-    //
     // STEP-7.4: Click the button
-    //
     // STEP-7.5: Test that be project is deleted(hidden)
     // await expect(what?).toBeWhat();
   });
@@ -104,15 +89,10 @@ test.describe('CRUD operations', () => {
    * STEP-8: Update a project
    */
   test('update', async ({}) => {
-    // await updateProject(page);
     // STEP-8.3: Get the update button
-    //
     // STEP-8.4: Click the update button
-    //
     // STEP-8.7: Fill the input, use the `UPDATE_PROJECT_NEW_TITLE` from  constants
-    //
     // STEP-8.10 - Get the apply changes button and click it
-    //
     // STEP-8.11 - Check if the newly added project is visible
     // await expect(what?).toBeWhat();
   });

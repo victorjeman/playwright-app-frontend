@@ -29,7 +29,7 @@ export const ProjectThumbnail = ({ project }: Props) => {
 
   return (
     // STEP-5.9: add a test id attr with `project-thumbnail` as value
-    <Card shadow="md" padding="lg" radius="md" withBorder data-testid="project-thumbnail">
+    <Card shadow="md" padding="lg" radius="md" withBorder data-testid="">
       <Group position="apart" mb="lg">
         <Text size="xl" weight={600} mb="0">
           {project.title}
