@@ -1,8 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
 
-import { PROJECT } from './shared/project-constants';
-import { login } from './shared/project-utils';
-
 /*
  * STEP-1: Test your first test :P.
  * TIP:
@@ -17,7 +14,7 @@ test('login button is visible', async ({ page }) => {
 
   const adminLoginButton = await page.getByRole('button', { name: 'Sign in / Victor / admin' });
 
-  //* Q:  What is the difference between these two login buttons?
+  //* Q:  What is the difference between how these two login buttons are targeted?
   // const loginButton = await page.getByRole('button', { name: /admin/ });
 
   await expect(adminLoginButton).toBeVisible();
@@ -25,7 +22,7 @@ test('login button is visible', async ({ page }) => {
 
 test.describe('CRUD operations', () => {
   /*
-   * STEP-6: Use the `beforeAll` hook to reset the API data
+   * STEP-6: Reset the API data using `beforeAll`.
    */
   // STEP-6.1: Use the `beforeAll` hook attached to the `test`.
   // STEP-6.2: Extract the `request` API.
@@ -35,12 +32,7 @@ test.describe('CRUD operations', () => {
   /*
    * STEP-4: Login before each test.
    */
-  test.beforeEach(async ({ page }) => {
-    // !IMPORTANT: Remove this code before commit
-    await page.goto('/');
-    const adminLoginButton = await page.getByRole('button', { name: 'Sign in / Victor / admin' });
-    await adminLoginButton.click();
-
+  test.beforeEach(async ({}) => {
     // STEP-4.1: Go to the main page.
     // STEP-4.2: Get the admin login button.
     // STEP-4.3: Click on the login button.
@@ -52,11 +44,7 @@ test.describe('CRUD operations', () => {
    * TIP:
    * The test should fail without the extra code that we need to add in the next step.
    */
-  test('can see projects', async ({ page }) => {
-    // !IMPORTANT: Remove this code before commit
-    await page.goto('/projects');
-    await expect(page).toHaveURL('/projects');
-
+  test('can see projects', async ({}) => {
     // STEP-3.1: Go to the main page.
     // STEP-3.2: Expect the new page to have the "projects" URL
   });
@@ -65,8 +53,8 @@ test.describe('CRUD operations', () => {
    * STEP-5: Create a project
    */
   test('create', async ({}) => {
-    // STEP-5.1: Save the project name in a variable.
-    // const newProjectName = '';
+    // STEP-5.1: Save the project title in a variable.
+    // const newProjectTitle = '';
     //
     // STEP-5.2: Get the input by label.
     // const input = ''
