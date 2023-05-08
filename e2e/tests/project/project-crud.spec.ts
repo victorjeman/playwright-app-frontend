@@ -45,7 +45,7 @@ test.describe('CRUD operations', () => {
    * The test should fail without the extra code that we need to add in the next step.
    */
   test('can see projects', async ({}) => {
-    // STEP-3.1: Go to the main page.
+    // STEP-3.1: Go to the projects page.
     // STEP-3.2: Expect the new page to have the "projects" URL
   });
 
