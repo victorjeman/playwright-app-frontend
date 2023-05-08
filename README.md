@@ -24,3 +24,5 @@ step 3 - create a GitHub repo
 step 4 - connect the playwright app with your second origin `it remote add my-origin git@github.com:your-new-repo-path`
 
 step 5 - push to your origin the branches that you need(`main`, `final`, and specific session branches if you want )
+
+test
